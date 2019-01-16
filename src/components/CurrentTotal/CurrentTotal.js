@@ -4,7 +4,8 @@ class CurrentTotal extends Component {
     render() {
         return (
             <div>
-                <p>[CurrentTotal]</p>
+                <h2>{this.props.total}</h2>
+                <button>Save</button>
             </div>
         );
     }

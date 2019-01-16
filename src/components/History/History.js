@@ -4,7 +4,7 @@ class History extends Component {
     render() {
         return (
             <div>
-                <p>[History]</p>
+                <ul></ul>
             </div>
         );
     }
