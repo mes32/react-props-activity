@@ -4,7 +4,9 @@ class EnterNumber extends Component {
     render() {
         return (
             <div>
-                <p>[EnterNumber]</p>
+                <button>Up</button>
+                <input placeholder='Enter Number' />
+                <button>Down</button>
             </div>
         );
     }
