@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 
 class History extends Component {
     render() {
+        let history = this.props.history;
+        let historyArr = [];
+        for (let x of history) {
+            historyArr.push(<li>{x}</li>);
+        }
         return (
-            <div>
-                <ul></ul>
-            </div>
+            <ul>
+                {historyArr}
+            </ul>
         );
     }
 }
