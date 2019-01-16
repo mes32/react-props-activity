@@ -5,23 +5,35 @@ class EnterNumber extends Component {
     constructor() {
         super();
         this.state = {
-            entered: undefined,
+            entered: '',
         }
     }
 
     pressedUp = (event) => {
-        this.props.currentUp(1);
+        if (this.state.entered !== '') {
+            let amount = Number(this.state.entered);
+            this.props.currentUp(amount);
+        }
     }
 
     pressedDown = (event) => {
-        this.props.currentDown(1);
+        if (this.state.entered !== '') {
+            let amount = Number(this.state.entered);
+            this.props.currentDown(amount);
+        }
+    }
+
+    enteredNumber = (event) => {
+        this.setState({
+            entered: event.target.value,
+        });
     }
 
     render() {
         return (
             <div>
                 <button onClick={this.pressedUp}>Up</button>
-                <input placeholder='Enter Number' />
+                <input type="number" onChange={this.enteredNumber} placeholder="Enter Number" />
                 <button onClick={this.pressedDown}>Down</button>
             </div>
         );
