@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 
+// Component represeting the history of saved totals
 class History extends Component {
     render() {
-        let history = this.props.history;
-        let historyArr = [];
-        for (let x of history) {
-            historyArr.push(<li>{x}</li>);
-        }
+        let historyArr = this.props.history;
         return (
             <ul>
-                {historyArr}
+                { historyArr.map(x => <li>{x}</li>) }
             </ul>
         );
     }

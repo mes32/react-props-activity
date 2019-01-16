@@ -14,18 +14,21 @@ class App extends Component {
     }
   }
 
+  // Increase the current total by an amount
   up = (amount) => {
     this.setState({
       total: this.state.total + amount,
     })
   }
 
+  // Decrease the current total by an amount
   down = (amount) => {
     this.setState({
       total: this.state.total - amount,
     })
   }
 
+  // Save the current toal in the history
   saveTotal = () => {
     this.setState({
       history: [...this.state.history, this.state.total],

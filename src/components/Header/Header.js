@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Header.css';
 
+// Component representing a header banner for the application.
 class Header extends Component {
     render() {
         return (

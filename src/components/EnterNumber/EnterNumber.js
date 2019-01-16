@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+// Component repsenting form for entering numbers to add/subtract from the 
+// current total, and buttons for 'Up' (add) and 'Down' (subtract).
 class EnterNumber extends Component {
 
     constructor() {
@@ -9,6 +11,8 @@ class EnterNumber extends Component {
         }
     }
 
+    // Event handler for 'Up' button
+    // Takes the currently entred value and increases the current total
     pressedUp = (event) => {
         if (this.state.entered !== '') {
             let amount = Number(this.state.entered);
@@ -16,6 +20,8 @@ class EnterNumber extends Component {
         }
     }
 
+    // Event handler for 'Down' button
+    // Takes the currently entred value and decreases the current total
     pressedDown = (event) => {
         if (this.state.entered !== '') {
             let amount = Number(this.state.entered);
@@ -23,6 +29,8 @@ class EnterNumber extends Component {
         }
     }
 
+    // Event handler for input field
+    // Takes the currently entred value and updates this component's state
     enteredNumber = (event) => {
         this.setState({
             entered: event.target.value,
